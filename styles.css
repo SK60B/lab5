@@ -236,3 +236,57 @@ body.night .modal-content textarea {
 body.night .modal-content button {
   background-color: #4a90e2;
 }
+
+/*стиль для кнопки
+/* Обгортка перемикача теми */
+.theme-switch {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Стиль самого чекбокса */
+.theme-switch input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+/* Коло перемикача */
+.theme-switch input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  left: 1px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* Коли ввімкнено */
+.theme-switch input[type="checkbox"]:checked {
+  background-color: #4a90e2;
+}
+
+.theme-switch input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+/* Нічна тема — колір тексту */
+body.night .theme-switch {
+  color: #f0f0f0;
+}
