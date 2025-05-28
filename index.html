@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Резюме - Вадим Хортик</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Вадим Хортик</h1>
+        <div class="contact-info">
+            <div class="contact-item">Email: vadymhortyk@gmail.com</div>
+            <div class="contact-item">Телефон: +380730852873</div>
+            <div class="contact-item">Адреса: Львів, вул. Виговського 81</div>
+            <div class="contact-item">Дата народження: 29.01.2005</div>
+        </div>
+        <label style="position:absolute; top:10px; right:20px;">
+        <input type="checkbox" id="themeToggle"> Нічний режим
+    </label>
+    </header>
+
+    <main>
+        <section>
+            <h3>Про мене</h3>
+            <p>Мене звати Вадим. Маю початкові знання та навички у таких мовах програмування: <strong>Python</strong>, <strong>C++</strong>, <strong>C#</strong>.</p>
+            <p>Ці знання я здобув під час навчання та виконання практичних завдань. Стараюсь надалі розвивати ці навички, щоб здобувати нові знання та реалізовувати проєкти.</p>
+        </section>
+
+        <section>
+            <h3>Досвід роботи</h3>
+            <p>Досвіду роботи наразі не маю.</p>
+        </section>
+
+        <section>
+            <h3>Освіта</h3>
+            <p><strong>Національний університет "Львівська Політехніка"</strong></p>
+            <p>Спеціальність: Кібербезпека</p>
+            <p>Ступінь: Незакінчена вища освіта (2022–2026)</p>
+        </section>
+
+        <section>
+            <h3>Навички</h3>
+            <ul>
+                <li>Відповідальність</li>
+                <li>Увага до деталей</li>
+                <li>Знання англійської мови (рівень A2)</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h3>Відгуки роботодавців</h3>
+            <ul id="comments"></ul>
+        </section>
+        
+        <button id="openModalBtn" style="margin: 20px auto; display: block;">Зворотний зв’язок</button>
+
+    </main>
+    <footer id="footer-info" style="text-align:center; padding:20px; font-size:14px;"></footer>
+    
+    <div id="modal" class="modal">
+  <div class="modal-content">
+    <button id="closeModalBtn" title="Закрити">&times;</button>
+    <h3>Зворотний зв’язок</h3>
+    <form action="https://formspree.io/f/xblopyen" method="POST">
+      <input name="name" type="text" placeholder="Ім’я" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="phone" type="text" placeholder="Телефон">
+      <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit">Відправити</button>
+    </form>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
